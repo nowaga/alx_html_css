@@ -1,115 +1,110 @@
-/* Reset and base styles */
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f2f5;
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
   color: #333;
+}
+
+header {
+  background-color: #002b5c;
+  color: white;
+  padding: 10px 20px;
+}
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+header li {
+  margin-right: 20px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo {
+  font-size: 28px;
+  margin-right: 20px;
+}
+
+/* Layout */
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Header & Footer */
-header, footer {
-  background-color: #0b3d91;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
-
-/* Main layout */
 main {
   display: flex;
   flex-direction: row;
   flex: auto;
-  gap: 1rem;
-  padding: 1rem;
+  padding: 20px;
 }
 
-/* Article and Aside areas */
 article {
   flex: 2;
   overflow-y: auto;
-  background-color: #ffffff;
-  padding: 1rem;
+  background-color: #fff;
+  padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-right: 15px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
 }
 
 aside {
   flex: 1;
   overflow-y: auto;
-  background-color: #fff8dc;
-  padding: 1rem;
+  background-color: #fef3c7;
+  padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+footer {
+  background-color: #002b5c;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
 
 /* Table styling */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 1rem;
-  background-color: #fafafa;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
 }
 
 th, td {
-  padding: 12px;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
+  padding: 10px;
   text-align: left;
 }
 
-th {
-  background-color: #0b3d91;
+thead {
+  background-color: #003f88;
   color: white;
 }
 
-/* Nav styling */
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 1rem;
-}
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
 
-nav li {
-  display: inline;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Links and footer text */
-footer a {
-  color: #ffc107;
-  text-decoration: none;
-}
-footer a:hover {
-  text-decoration: underline;
-}
-/* Tweet block styling */
-blockquote.tweet {
-  background-color: #eef6ff;
-  border-left: 5px solid #0b3d91;
-  margin: 1rem 0;
-  padding: 1rem;
-  font-style: italic;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-}
-
-blockquote.tweet footer {
-  margin-top: 0.5rem;
-  font-size: 0.9em;
-  color: #555;
+  article, aside {
+    margin: 0 0 15px 0;
+  }
 }
