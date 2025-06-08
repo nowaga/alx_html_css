@@ -2,36 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link href="base.css" rel="stylesheet">
-<link href="styles.css" rel="stylesheet">
-  <title>My Tweet Page</title>
+  <title>Developer Tweets</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="tweets.html">Tweets</a></li>
-    </ul>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tweets.html">Tweets</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
     <article>
-      <!-- Embedded tweet -->
-      <blockquote class="twitter-tweet">
-        <p lang="en" dir="ltr">A great developer is not the one who knows everything. It’s the one who knows how to find what they don’t know and keep learning. <a href="https://twitter.com/hashtag/dev?src=hash&amp;ref_src=twsrc%5Etfw">#dev</a></p>
-        &mdash; CodeWisdom (@CodeWisdom) 
-        <a href="https://twitter.com/CodeWisdom/status/1234567890123456789?ref_src=twsrc%5Etfw">March 15, 2023</a>
-      </blockquote>
-      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <h1>Developer Wisdom 💡</h1>
+
+      <div class="tweet-card">
+        <blockquote>
+          A great developer is not the one who knows everything. It’s the one who knows how to find what they don’t know and keep learning. 
+          <a href="#">#dev</a>
+          <footer>
+            — CodeWisdom (@CodeWisdom), <a href="#">March 15, 2023</a>
+          </footer>
+        </blockquote>
+      </div>
+
+      <div class="tweet-card">
+        <blockquote>
+          First, solve the problem. Then, write the code. 
+          <footer>
+            — John Johnson
+          </footer>
+        </blockquote>
+      </div>
+
+      <div class="tweet-card">
+        <blockquote>
+          Good code is its own best documentation.
+          <footer>
+            — Steve McConnell
+          </footer>
+        </blockquote>
+      </div>
     </article>
 
     <aside>
-      <p>placeholder to add comment thread later</p>
+      <h3>Comments</h3>
+      <p>Placeholder to add comment thread later</p>
     </aside>
   </main>
 
   <footer>
-    <p>Made by YOUR NAME - <a href="https://your-link.com" target="_blank">here</a></p>
+    <p>Made by Noah Owaga - <a href="#">here</a></p>
   </footer>
 </body>
 </html>
