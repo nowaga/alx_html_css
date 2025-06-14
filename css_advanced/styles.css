@@ -374,3 +374,49 @@ section.membership h2 {
     max-width: 100%;
   }
 }
+section.faq {
+  padding: 60px 20px;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+section.faq h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5rem;
+  color: #C271FF;
+  margin-bottom: 40px;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  text-align: left;
+}
+
+.faq-item h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.1rem;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.9rem;
+  color: #000000;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
