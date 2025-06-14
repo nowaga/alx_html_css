@@ -226,3 +226,73 @@ section.quote {
     text-align: center;
   }
 }
+section.videos {
+  padding: 60px 20px;
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+section.videos h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5rem;
+  color: #C271FF;
+  margin-bottom: 40px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-card {
+  background-color: #FFFFFF;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-card h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.1rem;
+  color: #333333;
+  margin: 10px 0 5px;
+}
+
+.video-card p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.9rem;
+  color: #666666;
+  margin: 0 0 10px;
+}
+
+.video-info {
+  display:
