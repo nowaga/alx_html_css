@@ -296,3 +296,81 @@ section.videos h2 {
 
 .video-info {
   display:
+}
+section.membership {
+  padding: 60px 20px;
+  background-color: #071629;
+  text-align: center;
+}
+
+section.membership h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5rem;
+  color: #C271FF;
+  margin-bottom: 40px;
+}
+
+.membership-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.membership-item {
+  max-width: 200px;
+  text-align: center;
+}
+
+.membership-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.membership-item h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.1rem;
+  color: #C271FF;
+  margin: 10px 0 5px;
+}
+
+.membership-item p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.9rem;
+  color: #C271FF;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.register-button {
+  margin-top: 30px;
+  padding: 12px 30px;
+  background-color: #C271FF;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 22px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #a94dd6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .membership-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .membership-item {
+    max-width: 100%;
+  }
+}
