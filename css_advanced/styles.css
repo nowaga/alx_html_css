@@ -162,3 +162,67 @@ main section:first-of-type button {
   line-height: 1.4;
   color: #d0d0d0;
 }
+/* Quote section styles */
+section.quote {
+  padding: 60px 20px;
+  background-color: #C271FF; /* Heliotrope */
+  text-align: center;
+}
+
+.quote-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.quote-container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.quote-content {
+  max-width: 600px;
+  text-align: left;
+}
+
+.quote-content blockquote {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #d0d0d0;
+  margin: 0 0 20px 0;
+  line-height: 1.6;
+}
+
+.quote-content h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  margin: 0 0 5px 0;
+}
+
+.quote-content p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  color: #C271FF;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .quote-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .quote-content {
+    text-align: center;
+  }
+}
