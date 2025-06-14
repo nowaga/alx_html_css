@@ -420,3 +420,57 @@ section.faq h2 {
     grid-template-columns: 1fr;
   }
 }
+footer.footer {
+  padding: 20px;
+  background-color: #071629;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-logo img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.footer-logo span {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  color: #FFFFFF;
+  vertical-align: middle;
+}
+
+.footer-social img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.footer-copyright {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.8rem;
+  color: #FFFFFF;
+  margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-social img {
+    margin: 0 5px;
+  }
+}
