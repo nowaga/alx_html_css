@@ -1,62 +1,69 @@
-/* Reset and base */
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: Arial, sans-serif;
   color: #fff;
   background-color: #000;
 }
 
-/* Container */
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Hero section */
+/* HEADER */
 .hero {
   position: relative;
   background: url('images/headphones_hero_1.jpg') no-repeat center center/cover;
   height: 100vh;
 }
 
-/* Navbar styles */
+/* Navbar */
 .navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px;
 }
-
 .logo {
   height: 30px;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+/* Hamburger toggle */
+#menu-toggle {
+  display: none;
+}
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
 }
 
-.nav-links a {
+/* Nav links */
+.nav-menu {
+  display: block;
+}
+.nav-menu ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.nav-menu ul li a {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
   font-size: 14px;
   transition: color 0.3s;
 }
-
-.nav-links a:hover,
-.nav-links a:active {
+.nav-menu ul li a:hover,
+.nav-menu ul li a:active {
   color: #FF6565;
 }
 
-/* Hero text center layout */
+/* Hero text centering */
 .hero-text {
   position: absolute;
   top: 50%;
@@ -64,19 +71,16 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   max-width: 600px;
-  padding: 20px;
+  padding: 0 20px;
 }
-
 .hero-text h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
-
 .hero-text p {
   font-size: 1.1rem;
   margin-bottom: 20px;
 }
-
 .btn {
   background-color: #FF6565;
   color: white;
@@ -84,43 +88,64 @@ body {
   border: none;
   font-size: 16px;
   border-radius: 5px;
-  text-transform: uppercase;
   cursor: pointer;
   transition: opacity 0.3s;
 }
-
 .btn:hover,
 .btn:active {
   opacity: 0.9;
 }
-
 .under-btn-text {
   margin-top: 20px;
   font-size: 1rem;
 }
 
-/* Responsive styles */
-@media screen and (max-width: 480px) {
+/* Mobile Styles */
+@media (max-width: 480px) {
   .navbar {
+    justify-content: center;
+  }
+  .hamburger {
+    display: block;
+  }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #000;
+    border: 1px solid #333;
+    padding: 10px;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  .nav-menu ul {
     flex-direction: column;
-    align-items: flex-start;
     gap: 10px;
   }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
+  /* Toggle nav visibility */
+  #menu-toggle:checked + .hamburger + .nav-menu {
+    display: block;
   }
-
   .hero-text h1 {
     font-size: 1.8rem;
   }
-
-  .hero-text p {
+  .hero-text p,
+  .under-btn-text {
     font-size: 1rem;
   }
-
   .btn {
     padding: 12px 25px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
