@@ -1,0 +1,380 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #000;
+}
+
+/* HEADER */
+.hero {
+  position: relative;
+  background: url('images/headphones_hero_1.jpg') no-repeat center center/cover;
+  height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.logo {
+  height: 30px;
+}
+
+/* Hamburger toggle */
+#menu-toggle {
+  display: none;
+}
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Nav links */
+.nav-menu {
+  display: block;
+}
+.nav-menu ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.nav-menu ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+.nav-menu ul li a:hover,
+.nav-menu ul li a:active {
+  color: #FF6565;
+}
+
+/* Hero text centering */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 600px;
+  padding: 0 20px;
+}
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+.btn {
+  background-color: #FF6565;
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.btn:hover,
+.btn:active {
+  opacity: 0.9;
+}
+.under-btn-text {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .navbar {
+    justify-content: center;
+  }
+  .hamburger {
+    display: block;
+  }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #000;
+    border: 1px solid #333;
+    padding: 10px;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  /* Toggle nav visibility */
+  #menu-toggle:checked + .hamburger + .nav-menu {
+    display: block;
+  }
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+  .hero-text p,
+  .under-btn-text {
+    font-size: 1rem;
+  }
+  .btn {
+    padding: 12px 25px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* WHAT WE DO SECTION */
+.what-we-do {
+  background-color: #fff;
+  color: #000;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.what-we-do .section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #071629;
+}
+
+.what-we-do .section-header p {
+  font-size: 1rem;
+  color: #071629;
+  margin-bottom: 40px;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.feature {
+  max-width: 250px;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature span {
+  font-size: 50px;
+  color: #FF6565;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #071629;
+}
+
+.feature p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Responsive features */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* OUR RESULTS SECTION */
+.our-results {
+  background: url('images/headphones_hero_2.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.our-results .section-header {
+  max-width: 900px;
+  margin: 0 auto 50px;
+}
+
+.our-results .section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.our-results .section-header p {
+  color: #d1d1d1;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 130px;
+}
+
+.pentagon {
+  width: 130px;
+  height: 130px;
+  background: url('images/pentagone.png') no-repeat center center/contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.stat-text {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.stat-card p {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #fff;
+}
+/* Contact Section */
+.contact {
+  background-color: #f8f8f8;
+  color: #000;
+  padding: 60px 20px;
+  text-align: center;
+}
+.contact .section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.contact .section-header p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #FF6565;
+  box-shadow: 0 0 5px #FF6565;
+}
+.contact-form .btn {
+  background-color: #FF6565;
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.contact-form .btn:hover {
+  background-color: #e94e4e;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* optional if your header overlaps the target */
+}
+.contact {
+  background-color: white;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}
+/* Footer Section */
+.footer {
+  background-color: #0a1a2d;
+  color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.footer-left img {
+  width: 160px;
+}
+
+.footer-right a {
+  margin: 0 10px;
+}
+
+.footer-right img {
+  width: 32px;
+  height: 32px;
+}
+
+.footer-copy {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #888888;
+}
+
